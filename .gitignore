@@ -58,3 +58,9 @@ temp/
 *.scssc
 
 /vendor/
+
+############
+## WSSPR
+############
+
+wp-wsspr-theme.zip
