@@ -1,0 +1,135 @@
+/******************************************************************
+
+Stylesheet: Overrides for WSSPR theme
+
+******************************************************************/
+
+
+
+/* Header override */
+
+.header
+{
+    background-color: #008e53;
+}
+
+#logo
+{
+    float: left;
+
+    margin: 0 auto;
+    height: 6rem;
+
+    line-height: 5.25rem;
+    width: 75%;
+    
+    background-image: url('../images/wsspr-logo-min.png');
+    background-repeat: no-repeat;
+    background-size: auto 5rem;
+    background-position: left 0rem top 0.5rem;
+}
+
+#logo a
+{
+    margin-left: 6rem;
+
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.header hr
+{
+    margin: 0;
+    margin-bottom: 0.5rem;
+
+    width: 100%;
+
+    border: 1px solid #008e535d;
+}
+
+
+
+/* Header search form */
+
+.header .searchform
+{
+    float: right;
+
+    margin-top: 1.75rem;
+
+    width: 25%;
+    height: 4.5rem;
+}
+
+.header .searchform #s
+{
+    float: left;
+
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+
+    height: calc(2.5rem - 4px);
+    line-height: calc(2.5rem - 4px);
+    width: calc(100% - 3rem - 28px);
+
+    border: 2px solid rgb(68, 66, 5);
+    border-radius: 4px;
+
+    color: #008e53;
+}
+
+.header .searchform button
+{
+    float: left;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-image: url('../images/search-green.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: rgb(184, 178, 35);
+    background-size: 1rem;
+
+    border: 2px solid rgb(68, 66, 5);
+    border-radius: 4px;
+}
+
+.header .searchform button:hover
+{
+    background-color: rgb(173, 169, 35);
+}
+
+.header .searchform button:active
+{
+    background-color: rgb(160, 155, 27);
+}
+
+
+
+/* Menu item override */
+
+.menu-item
+{
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+
+    background-color: rgb(184, 178, 35);
+
+    border-radius: 0.5rem;
+}
+
+.menu-item:hover
+{
+    background-color: rgb(173, 169, 35);
+}
+
+.menu-item:active
+{
+    background-color: rgb(160, 155, 27);
+}
+
+.menu-item a
+{
+    padding: 0.5rem !important;
+}
