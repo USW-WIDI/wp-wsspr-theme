@@ -107,16 +107,32 @@ Stylesheet: Overrides for WSSPR theme
 
 
 
+/* Footer override */
+
+.footer
+{
+    background-color: #008e53;
+}
+
+
+
 /* Menu item override */
 
 .menu-item
 {
-    margin-bottom: 0.5rem;
     margin-right: 0.5rem;
 
     background-color: rgb(184, 178, 35);
+} 
 
-    border-radius: 0.5rem;
+header .menu-item
+{
+    margin-bottom: 0.5rem;
+}
+    
+footer .menu-item
+{
+    margin-top: 0.5rem;
 }
 
 .menu-item:hover
