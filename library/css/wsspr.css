@@ -6,6 +6,22 @@ Stylesheet: Overrides for WSSPR theme
 
 
 
+/* Font import */
+
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@300;400;600;700&family=Raleway:wght@300;400;600;700&family=Signika:wght@300;400;600;700&display=swap');
+
+
+
+/* body override */
+
+body
+{
+    font-family: 'Biryani';
+    color: #000;
+}
+
+
+
 /* Header override */
 
 .header
@@ -111,7 +127,26 @@ Stylesheet: Overrides for WSSPR theme
 
 .footer
 {
-    background-color: #008e53;
+    background-color: #333333;
+}
+    
+.footer nav
+{
+    display: none !important;
+}
+
+.footer, .footer p
+{
+    padding: 0.5rem;
+
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 
@@ -123,16 +158,13 @@ Stylesheet: Overrides for WSSPR theme
     margin-right: 0.5rem;
 
     background-color: rgb(184, 178, 35);
+
+    border-radius: 0.5rem;
 } 
 
 header .menu-item
 {
     margin-bottom: 0.5rem;
-}
-    
-footer .menu-item
-{
-    margin-top: 0.5rem;
 }
 
 .menu-item:hover
@@ -148,4 +180,42 @@ footer .menu-item
 .menu-item a
 {
     padding: 0.5rem !important;
+}
+
+
+
+/* Main override */
+
+main
+{
+
+}
+
+
+
+/* NHS UK elements */
+
+.nhsuk-u-visually-hidden
+{
+    padding: 1rem;
+
+    border: 1px solid #DDD;
+}
+
+
+
+/* Disable by-lines */
+
+.byline
+{
+    display: none !important;
+}
+
+
+
+/* Article overrides */
+
+.hentry
+{
+    border: 0 !important;
 }
