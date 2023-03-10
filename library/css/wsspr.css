@@ -16,6 +16,8 @@ Stylesheet: Overrides for WSSPR theme
 
 body
 {
+    background-color: #FFF !important;
+    
     font-family: 'Biryani';
     color: #000;
 }
@@ -217,5 +219,7 @@ main
 
 .hentry
 {
+    background-color: #FFF !important;
+
     border: 0 !important;
 }
