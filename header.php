@@ -51,6 +51,7 @@
 					<div class="title-container">
 
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+
 						<?php get_search_form(); ?>
 
 					</div>
@@ -60,7 +61,8 @@
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav id="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -74,6 +76,36 @@
         			               'depth' => 0,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
+
+					</nav>
+
+					<nav id="mobile-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+						<a class="mobile-menu-btn" onclick="open_nav()"></a>
+
+						<div class="mobile-menu-itms" id="mobile-menu-itms" style="display: none;">
+
+							<a class="close-mobile-menu-btn" onclick="close_nav()">X</a>
+
+							<br />
+
+							<?php wp_nav_menu(array(
+									'container' => false,                           // remove nav container
+									'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+									'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+									'menu_class' => 'nav top-nav cf',               // adding custom nav class
+									'theme_location' => 'main-nav',                 // where it's located in the theme
+									'before' => '',                                 // before the menu
+									'after' => '',                                  // after the menu
+									'link_before' => '',                            // before each link
+									'link_after' => '',                             // after each link
+									'depth' => 0,                                   // limit the depth of the nav
+									'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+
+						</div>
+
+						<?php get_search_form(); ?>
 
 					</nav>
 
