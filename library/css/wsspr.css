@@ -28,7 +28,10 @@ body
 
 .header
 {
-    background-color: #008e53;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    background-color: #FFF;
 }
 
 #logo
@@ -38,10 +41,10 @@ body
     margin: 0 auto;
     height: 6rem;
 
-    line-height: 5.25rem;
+    line-height: 6rem;
     width: 75%;
     
-    background-image: url('../images/wsspr-logo-min.png');
+    background-image: url('../images/logos/wsspr-min.png');
     background-repeat: no-repeat;
     background-size: auto 5rem;
     background-position: left 0rem top 0.5rem;
@@ -52,7 +55,7 @@ body
     margin-left: 6rem;
 
     font-size: 1.5rem;
-    color: #FFF;
+    color: #000;
 }
 
 .header hr
@@ -103,7 +106,7 @@ body
     width: 2.5rem;
     height: 2.5rem;
 
-    background-image: url('../images/search-green.png');
+    background-image: url('../images/search.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: rgb(184, 178, 35);
@@ -151,6 +154,25 @@ body
     text-align: center;
 }
 
+.footer #inner-footer .logos
+{
+    width: auto;
+
+    margin: 0 auto;
+}
+
+.footer #inner-footer .logos img
+{
+    margin-left: 1rem;
+
+    max-height: 4.5rem;
+}
+
+.footer #inner-footer .logos img:last-child
+{
+    margin-right: 1rem;
+}
+
 
 
 /* Menu item override */
@@ -162,6 +184,9 @@ body
     background-color: rgb(184, 178, 35);
 
     border-radius: 0.5rem;
+
+    height: 2.5rem;
+    line-height: 1.75rem;
 } 
 
 header .menu-item
@@ -182,6 +207,35 @@ header .menu-item
 .menu-item a
 {
     padding: 0.5rem !important;
+}
+
+.menu-item.trp-language-switcher-container
+{
+    padding-right: 2rem;
+    
+    background-image: url('../images/drop-down.png');
+    background-repeat: no-repeat;
+    background-position-y: 1rem;
+    background-size: 1rem;
+    background-position-x: calc(100% - 0.8rem);
+}
+
+.menu-item.trp-language-switcher-container a
+{
+    padding-bottom: 0 !important;
+}
+
+.menu-item.trp-language-switcher-container ul
+{
+    background: 0 !important;
+    border: 0 !important;
+}
+
+.menu-item.trp-language-switcher-container .menu-item.trp-language-switcher-container
+{
+    padding-right: 0rem !important;
+    
+    background-image: none !important;
 }
 
 
@@ -222,4 +276,42 @@ main
     background-color: #FFF !important;
 
     border: 0 !important;
+}
+
+
+/* Wrap overrides */
+
+.wrap
+{
+    width: 100% !important;
+}
+
+@media only screen and (min-width: 1280px)
+{
+
+    .wrap
+    {
+        width: 90% !important;
+    }
+
+}
+
+@media only screen and (min-width: 1600px)
+{
+
+    .wrap
+    {
+        width: 80% !important;
+    }
+
+}
+
+@media only screen and (min-width: 1920px)
+{
+
+    .wrap
+    {
+        width: 70% !important;
+    }
+
 }

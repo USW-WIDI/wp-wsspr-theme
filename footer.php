@@ -20,6 +20,14 @@
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
+					<div class="logos">
+
+						<img alt="University of South Wales (USW) logo" src="wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
+
+						<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr-min.png" />
+
+					</div>
+
 				</div>
 
 			</footer>
@@ -31,4 +39,4 @@
 
 	</body>
 
-</html> <!-- end of site. what a ride! -->
+</html> <!-- end of site -->

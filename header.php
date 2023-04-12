@@ -48,7 +48,7 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<div class="title-container wrap">
+					<div class="title-container">
 
 						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 						<?php get_search_form(); ?>
