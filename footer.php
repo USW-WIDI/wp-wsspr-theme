@@ -24,6 +24,10 @@
 
 						<div class="logos">
 
+							<img alt="Health and Care Research Wales (HCRW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/hcrw.png" />
+
+							<img alt="NHS Wales logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/nhs-wales.png" />
+
 							<img alt="University of South Wales (USW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
 
 							<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr-min.png" />

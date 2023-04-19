@@ -85,9 +85,7 @@
 
 						<div class="mobile-menu-itms" id="mobile-menu-itms" style="display: none;">
 
-							<a class="close-mobile-menu-btn" onclick="close_nav()">X</a>
-
-							<br />
+							<a class="close-mobile-menu-btn" onclick="close_nav()">×</a>
 
 							<?php wp_nav_menu(array(
 									'container' => false,                           // remove nav container
