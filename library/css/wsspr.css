@@ -83,9 +83,10 @@ NOT USED AS OF 2023-06-05
 
 header .menu-item
 {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 
     flex: 1 0 auto;
+    flex-grow: unset;
 }
 
 header .menu-item a
@@ -94,6 +95,7 @@ header .menu-item a
 
     color: #000;
     text-decoration: none !important;
+    font-weight: 500;
 }
 
 header .menu-item:hover a
@@ -116,15 +118,58 @@ header .menu-item.menu-item-has-children:active a
     color: rgb(128, 115, 16) !important;
 }
 
-.menu-item.trp-language-switcher-container
+header .menu-item.menu-item-has-children .sub-menu
 {
-    padding-right: 2rem;
-    
-    background-image: url('../images/drop-down.png');
+    border: none !important;
+    background-color: #FFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12), 0px 0px 6px rgba(0, 0, 0, 0.06);
+}
+
+header .menu-item.menu-item-has-children .sub-menu .menu-item
+{
+    background-color: #FFF;
+}
+
+header .menu-item.menu-item-has-children .sub-menu .menu-item a
+{
+    background-color: #FFF;
+
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem !important;
+
+    color: #000 !important;
+    text-align: center;
+}
+
+header .menu-item.menu-item-has-children .sub-menu .menu-item:hover a
+{
+    color: rgb(0, 138, 80) !important;
+}
+
+header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
+{
+    color: rgb(0, 95, 56) !important;
+}
+
+.menu-item.trp-language-switcher-container, header .menu-item.menu-item-has-children
+{
+    padding-right: 1rem;
+
+    background-image: url(../images/drop-down-black.png);
     background-repeat: no-repeat;
-    background-position-y: 1rem;
-    background-size: 1rem;
-    background-position-x: calc(100% - 0.8rem);
+    background-position-y: 0.6rem;
+    background-size: 0.5rem;
+    background-position-x: calc(100% - 0.3rem);
+}
+
+.menu-item.trp-language-switcher-container:hover, header .menu-item.menu-item-has-children:hover
+{
+    background-image: url(../images/lift-up-yellow.png);
+}
+
+.menu-item.trp-language-switcher-container:active, header .menu-item.menu-item-has-children:active
+{
+    background-image: url(../images/lift-up-dark-yellow.png);
 }
 
 .menu-item.trp-language-switcher-container a
