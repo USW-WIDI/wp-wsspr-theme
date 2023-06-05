@@ -50,13 +50,11 @@
 
 					<div class="title-container">
 
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" height="100px" alt="Wales School for Social Prescribing Research (WSSPR) logo" /><?php //bloginfo('name'); ?></a></p>
 
-						<?php get_search_form(); ?>
+						<?php //get_search_form(); ?>
 
 					</div>
-
-					<hr />
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>

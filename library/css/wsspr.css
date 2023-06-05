@@ -30,7 +30,7 @@ body
 {
     margin-left: 1rem;
     margin-right: 1rem;
-
+    
     background-color: #FFF;
 }
 
@@ -38,18 +38,13 @@ body
 {
     float: left;
 
-    margin: 0 auto;
-    height: 6rem;
-
-    line-height: 5.25rem;
-    width: 100%;
-    
-    background-image: url('../images/logos/wsspr-min.png');
-    background-repeat: no-repeat;
-    background-size: auto 5rem;
-    background-position: left 0rem top 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
+/*
+NOT USED AS OF 2023-06-05
 #logo a
 {
     margin-left: 6rem;
@@ -66,7 +61,7 @@ body
     width: 100%;
 
     border: 1px solid #008e535d;
-}
+}*/
 
 
 
@@ -75,39 +70,43 @@ body
 #main-nav
 {
     display: none;
+
+    margin-top: 2rem;
 }
 
 header .menu-item
 {
     margin-right: 0.5rem;
 
-    height: 2.5rem;
-
-    background-color: rgb(184, 178, 35);
-
-    border-radius: 0.5rem;
-} 
-
-header .menu-item
-{
-    margin-bottom: 0.5rem;
-}
-
-header .menu-item:hover
-{
-    background-color: rgb(173, 169, 35);
-}
-
-header .menu-item:active
-{
-    background-color: rgb(160, 155, 27);
+    flex: 1 0 auto;
 }
 
 header .menu-item a
 {
-    padding: 0.5rem !important;
+    padding: 0;
 
     color: #000;
+    text-decoration: none !important;
+}
+
+header .menu-item:hover a
+{
+    color: rgb(0, 138, 80) !important;
+}
+
+header .menu-item:active a
+{
+    color: rgb(0, 95, 56) !important;
+}
+
+header .menu-item.menu-item-has-children:hover a
+{
+    color: rgb(173, 156, 21) !important;
+}
+
+header .menu-item.menu-item-has-children:active a
+{
+    color: rgb(128, 115, 16) !important;
 }
 
 .menu-item.trp-language-switcher-container
@@ -145,6 +144,16 @@ header .menu-item a
     #main-nav
     {
         display: block !important;
+    }
+
+    .header .nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-wrap: wrap;
+
+        height: 100px;
     }
 
 }
@@ -210,11 +219,6 @@ header .menu-item a
 
 @media only screen and (min-width: 768px)
 {
-
-    #logo
-    {
-        width: 75% !important;
-    }
 
     .header .title-container .searchform
     {
