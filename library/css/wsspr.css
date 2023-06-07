@@ -17,7 +17,7 @@ Stylesheet: Overrides for WSSPR theme
 
 body
 {
-    background-color: #FFF !important;
+    background-color: rgb(250, 248, 244);
     
     font-family: 'Poppins';
     color: #000;
@@ -32,7 +32,7 @@ body
     margin-left: 1rem;
     margin-right: 1rem;
 
-    background-color: #FFF;
+    background-color: #FFF !important;
 }
 
 .header *
@@ -44,9 +44,15 @@ body
 {
     float: left;
 
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+#logo img
+{
+    width: auto;
+    height: 60px;
 }
 
 /*
@@ -196,6 +202,18 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     {
         display: block !important;
     }
+    
+    #logo
+    {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    #logo img
+    {
+        height: 100px;
+    }
 
     .header .nav
     {
@@ -282,23 +300,22 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 /* Mobile menu */
 
+#mobile-nav
+{
+    margin-top: 1rem;
+}
+
 .mobile-menu-btn
 {
-    float: left;
+    float: right;
 
     width: 3rem;
     height: 3rem;
 
-    margin-right: 0.5rem;
-
     background-image: url('../images/hamburger-black.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-color: rgb(184, 178, 35);
-    background-size: 1rem;
-
-    border: 2px solid rgb(68, 66, 5);
-    border-radius: 4px;
+    background-size: 1.5rem;
 }
 
 .close-mobile-menu-btn
@@ -381,6 +398,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 .header #mobile-nav .searchform
 {
+    display: none !important;
     float: left;
 
     width: calc(100% - 3.5rem);
@@ -447,51 +465,35 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 .footer
 {
-    background-color: #333333;
-}
-    
-.footer nav
-{
-    float: left;
-
-    width: 25%;
-
-    text-align: left;
+    background-color: #FFF !important;
 }
 
-.footer nav .menu-item
+.footer #inner-footer p
 {
-    float: none !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
-    text-align: center;
-}
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
-.footer, .footer p
-{
-    padding: 0.5rem;
+    width: calc(100% - 1rem);
 
-    font-family: 'Open Sans';
+    font-family: 'Nunito';
     font-weight: 400;
-    font-size: 0.85rem;
-    color: #FFFFFF;
+    font-size: 1rem;
+    color: #000;
     letter-spacing: 0px;
     text-decoration: none;
-    text-transform: capitalize;
     text-align: center;
-}
-
-.footer .footer-right
-{
-    float: left;
-
-    width: 75%;
 }
 
 .footer #inner-footer .logos
 {
-    width: auto;
+    width: 100%;
 
     margin: 0 auto;
+
+    margin-top: 2rem;
     
     text-align: center;
 }
@@ -499,29 +501,14 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 .footer #inner-footer .logos img
 {
     margin-left: 1rem;
-
-    max-height: 4.5rem;
-}
-
-.footer #inner-footer .logos img:last-child
-{
     margin-right: 1rem;
+
+    min-width: 6rem;
+    max-height: 6rem;
 }
 
-@media only screen and (max-width: 864px)
+@media only screen and (min-width: 768px)
 {
-    
-    .footer nav
-    {
-        width: 100%;
-    
-        text-align: center;
-    }
-
-    .footer .footer-right
-    {
-        width: 100%;
-    }
 
 }
 
@@ -560,7 +547,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 .hentry
 {
-    background-color: #FFF !important;
+    background-color: rgb(250, 248, 244);
 
     border: 0 !important;
 }

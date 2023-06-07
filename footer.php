@@ -2,39 +2,27 @@
 
 				<div id="inner-footer" class="wrap cf">
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
+					<div class="logos">
 
-					<div class="footer-right">
+						<img alt="University of South Wales (USW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
 
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+						<img alt="Wales PRIME Centre logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/prime-centre-wales.png" />
 
-						<div class="logos">
+						<img alt="WcVA logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wcva.png" />
 
-							<img alt="Health and Care Research Wales (HCRW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/hcrw.png" />
+						<img alt="Health and Care Research Wales (HCRW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/hcrw.png" />
+						
+						<img alt="Welsh Government funding logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/welsh-government.png" />
+						
+					</div>
 
-							<img alt="NHS Wales logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/nhs-wales.png" />
+					<div class="logos">
 
-							<img alt="University of South Wales (USW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
-
-							<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr-min.png" />
-
-						</div>
+						<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" />
 
 					</div>
+
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 				</div>
 

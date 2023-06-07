@@ -50,7 +50,7 @@
 
 					<div class="title-container">
 
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" height="100px" alt="Wales School for Social Prescribing Research (WSSPR) logo" /><?php //bloginfo('name'); ?></a></p>
+						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" alt="Wales School for Social Prescribing Research (WSSPR) logo" /><?php //bloginfo('name'); ?></a></p>
 
 						<?php //get_search_form(); ?>
 
