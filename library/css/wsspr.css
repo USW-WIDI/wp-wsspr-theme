@@ -15,9 +15,17 @@ Stylesheet: Overrides for WSSPR theme
 
 /* body override */
 
-body
+/*body
 {
     background-color: rgb(250, 248, 244);
+    
+    font-family: 'Poppins';
+    color: #000;
+}*/
+
+body
+{
+    background-color: #FFF;
     
     font-family: 'Poppins';
     color: #000;
