@@ -2,24 +2,40 @@
 
 				<div id="inner-footer" class="wrap cf">
 
-					<div class="logos">
+					<div class="logos primary">
 
-						<img alt="University of South Wales (USW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
+						<a href="https://www.wsspr.wales/"  target="_blank">
+							<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" />
+						</a>
 
-						<img alt="Wales PRIME Centre logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/prime-centre-wales.png" />
+						<a href="https://phw.nhs.wales/"  target="_blank">
+							<img alt="Public Health Wales (PHW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/phw.png" />
+						</a>
 
-						<img alt="WcVA logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wcva.png" />
-
-						<img alt="Health and Care Research Wales (HCRW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/hcrw.png" />
-						
-						<img alt="Welsh Government funding logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/welsh-government.png" />
-						
 					</div>
 
-					<div class="logos">
+					<div class="logos secondary">
 
-						<img alt="Wales School of Social Prescribing Research (WSSPR) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" />
+						<a href="https://www.southwales.ac.uk/research/"  target="_blank">
+							<img alt="University of South Wales (USW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/usw.png" />
+						</a>
 
+						<a href="http://www.primecentre.wales/"  target="_blank">
+							<img alt="Wales PRIME Centre logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/prime-centre-wales.png" />
+						</a>
+
+						<a href="https://wcva.cymru/"  target="_blank">
+							<img alt="WcVA logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/wcva.png" />
+						</a>
+
+						<a href="https://healthandcareresearchwales.org/"  target="_blank">
+							<img alt="Health and Care Research Wales (HCRW) logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/hcrw.png" />
+						</a>
+						
+						<a href="https://healthandcareresearchwales.org/"  target="_blank">
+							<img alt="Welsh Government funding logo" src="http://157.245.38.191/wp-content/themes/wp-wsspr-theme/library/images/logos/welsh-government.png" />
+						</a>
+						
 					</div>
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
