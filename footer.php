@@ -32,7 +32,23 @@
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
+<!-- Added by Tareq Starts -->
+    <script>
+    $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+        
+       // $('area').on('click', function() {
+       //     alert($(this).attr('alt') + ' clicked');
+       // });
+    });
+    </script>    
 
+    <script type="text/javascript">
+        $(function() {
+            $('.tareq_mi').maphilight();
+        });
+</script>
+<!-- Added by Tareq Ends -->
 	</body>
 
 </html> <!-- end of site -->

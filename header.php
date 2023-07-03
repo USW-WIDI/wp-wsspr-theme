@@ -37,7 +37,20 @@
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
-
+		
+		<!-- Added by Tareq Starts -->
+			<style>
+	.tareq_mi {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="https://projects.davidlynch.org/maphilight/jquery.maphilight.js"></script>
+	<!-- Added by Tareq Ends -->
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
