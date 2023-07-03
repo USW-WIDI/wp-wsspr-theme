@@ -29,8 +29,8 @@ body
 
 .header
 {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     background-color: #FFF !important;
 }
@@ -51,8 +51,8 @@ body
 
 #logo img
 {
-    width: 250px;
-    height: 96px;
+    width: 150px;
+    height: 58px;
 }
 
 /*
@@ -212,7 +212,8 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
     #logo img
     {
-        height: 100px;
+        width: 250px;
+        height: 96px;
     }
 
     .header .nav
@@ -312,8 +313,6 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     width: 3rem;
     height: 3rem;
 
-    margin-top: 1rem;
-
     background-image: url('../images/hamburger-black.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -367,7 +366,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     left: 4rem;
     right: 0;
     
-    padding: 2rem 0rem 1rem 1rem;
+    padding: 1rem 0rem 1rem 1rem;
 
     width: calc(100% - 4rem);
     height: 100%;
@@ -394,11 +393,18 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     border-top: 1px solid #000;
 }
 
+.mobile-menu-itms .menu-item.menu-item-has-children
+{
+    background-image: none !important;
+
+    padding-bottom: 0 !important;
+}
+
 .mobile-menu-itms .menu-item.menu-item-has-children .sub-menu
 {
     background-color: #EEE !important;
 
-    margin-left: 1rem;
+    margin-top: 0.5rem !important;
     margin-bottom: 0 !important;
 
     box-shadow: none !important;
@@ -417,6 +423,11 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     
     padding: 0 !important;
     text-align: left;
+}
+
+.mobile-menu-itms .menu-item.menu-item-has-children.trp-language-switcher-container  .sub-menu
+{
+    margin-left: 1rem;
 }
 
 @media only screen and (min-width: 768px)
@@ -554,18 +565,34 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 .footer #inner-footer .logos.primary a img
 {
-    min-width: 6rem;
-    max-height: 6rem;
+    min-width: 4.5rem;
+    max-height: 4.5rem;
+
+    margin-bottom: 1rem;
 }
 
 .footer #inner-footer .logos.secondary a img
 {
-    min-width: 4.5rem;
-    max-height: 4.5rem;
+    min-width: 3.5rem;
+    max-height: 3.5rem;
+
+    margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 768px)
 {
+
+    .footer #inner-footer .logos.primary a img
+    {
+        min-width: 6rem;
+        max-height: 6rem;
+    }
+    
+    .footer #inner-footer .logos.secondary a img
+    {
+        min-width: 4.5rem;
+        max-height: 4.5rem;
+    }
 
 }
 
@@ -604,19 +631,19 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 h1.page-title, h1.entry-title
 {
-    font-size: calc(56 * 1px);
+    font-size: calc(36 * 1px);
     font-weight: 400;
 }
 
 h3.wp-block-heading
 {
-    font-size: calc(28 * 1px);
+    font-size: calc(24 * 1px);
     font-weight: 400;
 }
 
 section p
 {
-    font-size: calc(16 * 1px);
+    font-size: calc(18 * 1px) !important;
     font-weight: 400;
 
     -webkit-hyphens: none;
@@ -640,6 +667,26 @@ section p
 .entry-content
 {
     padding: 0rem 1.5rem 0 !important;
+}
+
+@media only screen and (min-width: 768px)
+{
+
+    h1.page-title, h1.entry-title
+    {
+        font-size: calc(56 * 1px);
+    }
+
+    h3.wp-block-heading
+    {
+        font-size: calc(28 * 1px);
+    }
+
+    section p
+    {
+        font-size: calc(20 * 1px) !important;
+    }
+
 }
 
 
