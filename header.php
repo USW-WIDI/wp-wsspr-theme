@@ -63,7 +63,7 @@
 
 					<div class="title-container">
 
-						<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="/wp-content/themes/wp-wsspr-theme/library/images/logos/wsspr.png" alt="Wales School for Social Prescribing Research (WSSPR) logo" /><?php //bloginfo('name'); ?></a></p>
+						<p id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><span class="splossary-s">s</span><span class="splossary-p">p</span>lsry<sup>&trade;</sup><?php //bloginfo('name'); ?></a></p>
 
 						<?php //get_search_form(); ?>
 

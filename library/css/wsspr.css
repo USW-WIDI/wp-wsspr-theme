@@ -15,14 +15,6 @@ Stylesheet: Overrides for WSSPR theme
 
 /* body override */
 
-/*body
-{
-    background-color: rgb(250, 248, 244);
-    
-    font-family: 'Poppins';
-    color: #000;
-}*/
-
 body
 {
     background-color: #FFF;
@@ -52,8 +44,6 @@ body
 {
     float: left;
 
-    margin-top: 1rem;
-    margin-bottom: 0rem;
     margin-right: 1rem;
 }
 
@@ -62,6 +52,26 @@ body
     width: 150px;
     height: 58px;
 }
+
+#logo a
+{
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #000;
+    font-size: 3rem;
+}
+
+#logo a .splossary-s, h1.page-title .splossary-s
+{
+    color: #70AD48;
+}
+
+#logo a .splossary-p, h1.page-title .splossary-p
+{
+    color: #2E75B6;
+}
+
+
 
 /*
 NOT USED AS OF 2023-06-05
@@ -214,8 +224,9 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     #logo
     {
         margin-top: 2rem;
-        margin-bottom: 2rem;
         margin-right: 2rem;
+        height: 87px;
+        line-height: 87px;
     }
 
     #logo img
@@ -662,7 +673,7 @@ section p
 
 .hentry
 {
-    background-color: rgb(250, 248, 244);
+    background-color: #FFF;
 
     border: 0 !important;
 }
@@ -745,4 +756,13 @@ section p
     padding-right: 12px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+}
+
+
+/* Customisations */
+
+.green-text
+{
+    color: #008A50 !important;
+    font-weight: bold !important;
 }
