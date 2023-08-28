@@ -15,7 +15,7 @@
 									<h1 class="page-title" itemprop="headline">
 									<?php
 									 	$title = get_the_title(); 
-									 	if ($title == "splossary") { echo "<span class=\"splossary-s\">s</span><span class=\"splossary-p\">p</span>lossary<sup>&trade;</sup>"; }
+									 	if ($title == "splossary") { echo "<center><span class=\"splossary-s\">s</span><span class=\"splossary-p\">p</span>lossary<sup>&trade;</sup></center>"; }
 										else { echo $title; }
 									?>
 									</h1>

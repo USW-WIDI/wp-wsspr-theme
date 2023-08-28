@@ -25,6 +25,25 @@ body
 
 
 
+/* Hyperlink overrides */
+
+p a, section.entry-content ul li a
+{
+    color: #BFB30D !important;
+}
+
+p a:hover, section.entry-content ul li a:hover
+{
+    color: #928b25 !important;
+}
+
+p a:active, section.entry-content ul li a:active
+{
+    color: #79720f !important;
+}
+
+
+
 /* Header override */
 
 .header
@@ -57,7 +76,7 @@ body
 {
     font-weight: bold;
     text-decoration: none !important;
-    color: #000;
+    color: #000 !important;
     font-size: 3rem;
 }
 
@@ -617,6 +636,25 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
 
 
 
+/* Footer menu */
+
+.footer nav
+{
+    padding: 2rem;
+
+    background-color: #212121;
+
+    display: flex;
+    justify-content: center;
+}
+
+.footer nav .footer-links ul li
+{
+
+}
+
+
+
 /* Main override */
 
 #main
@@ -709,6 +747,7 @@ section p
 }
 
 
+
 /* Wrap overrides */
 
 .wrap
@@ -757,6 +796,7 @@ section p
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+
 
 
 /* Customisations */
