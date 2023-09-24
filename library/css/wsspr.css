@@ -90,6 +90,13 @@ p a:active, section.entry-content ul li a:active
     color: #2E75B6;
 }
 
+h1.page-title .h1-splossary
+{
+    font-family: 'Nunito';
+    font-size: 4rem;
+    font-weight: bold;
+}
+
 
 
 /*
@@ -137,7 +144,9 @@ header .menu-item a
 
     color: #000;
     text-decoration: none !important;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Nunito';
 }
 
 header .menu-item:hover a
@@ -805,4 +814,9 @@ section p
 {
     color: #008A50 !important;
     font-weight: bold !important;
+}
+
+.pdfjs-iframe
+{
+    border: none !important;
 }

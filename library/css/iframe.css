@@ -1,0 +1,26 @@
+/******************************************************************
+
+Stylesheet: Style to embed into iframes
+
+******************************************************************/
+
+
+
+/* PDF.js customisations */
+
+div.toolbar
+{
+    display: none;
+}
+
+#viewerContainer
+{
+    top: 0;
+}
+
+.pdfViewer .page
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
