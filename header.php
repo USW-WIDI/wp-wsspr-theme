@@ -38,19 +38,6 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 		
-		<!-- Added by Tareq Starts -->
-			<style>
-	.tareq_mi {
-		border: none;
-		height: auto;
-		max-width: 100%;
-		width: auto;
-	}
-	</style>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
-<script type="text/javascript" src="https://projects.davidlynch.org/maphilight/jquery.maphilight.js"></script>
-	<!-- Added by Tareq Ends -->
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
@@ -63,7 +50,7 @@
 
 					<div class="title-container">
 
-						<p id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><span class="splossary-s">s</span><span class="splossary-p">p</span>lsry<sup>&trade;</sup><?php //bloginfo('name'); ?></a></p>
+						<p id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><span class="splossary-s">s</span><span class="splossary-p">p</span>plossary<sup>&trade;</sup><?php //bloginfo('name'); ?></a></p>
 
 						<?php //get_search_form(); ?>
 
