@@ -80,12 +80,18 @@ p a:active, section.entry-content ul li a:active
     font-size: 3rem;
 }
 
-#logo a .splossary-s, h1.page-title .splossary-s
+.splossary-text, .splossary-text *
+{
+    font-family: 'Nunito';
+    font-weight: bold;
+}
+
+.splossary-s
 {
     color: #70AD48;
 }
 
-#logo a .splossary-p, h1.page-title .splossary-p
+.splossary-p
 {
     color: #2E75B6;
 }
@@ -149,7 +155,7 @@ header .menu-item a
     font-family: 'Nunito';
 }
 
-header .menu-item:hover a
+header .menu-item:hover a, header .menu-item.menu-item-has-children:hover a
 {
     color: rgb(0, 138, 80) !important;
 }
@@ -161,12 +167,12 @@ header .menu-item:active a
 
 header .menu-item.menu-item-has-children:hover a
 {
-    color: rgb(173, 156, 21) !important;
+    color: rgb(0, 138, 80) !important;
 }
 
 header .menu-item.menu-item-has-children:active a
 {
-    color: rgb(128, 115, 16) !important;
+    color: rgb(0, 95, 56) !important;
 }
 
 header .menu-item.menu-item-has-children .sub-menu
@@ -871,6 +877,74 @@ section .wp-block-column ul li
     width: 100%;
     max-width: 960px;
 }
+
+
+
+/* WP-Members styling */
+
+#wpmem_login, #wpmem_reg
+{    
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    background-color: #E5E5E5;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 0.5rem;
+}
+
+#wpmem_login fieldset, #wpmem_reg fieldset
+{
+    margin: 0;
+}
+
+#wpmem_login fieldset *, #wpmem_reg fieldset *
+{
+    font-family: 'Poppins';
+}
+
+#wpmem_login fieldset .div_text input[type=text], #wpmem_reg fieldset .div_text input[type=text], #wpmem_login fieldset .div_text input[type=password], #wpmem_reg fieldset .div_text input[type=password], #wpmem_login fieldset .div_text input[type=email], #wpmem_reg fieldset .div_text input[type=email], #wpmem_login fieldset .div_select select, #wpmem_reg fieldset .div_select select
+{  
+    border-radius: 0.5rem !important;
+    border: 1px solid rgba(100, 100, 100, 0.5) !important;
+}
+
+#wpmem_login fieldset input[type=submit], #wpmem_reg fieldset input[type=submit]
+{  
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+    background-color: rgb(0, 138, 80);
+    color: #FFF;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 1rem;
+}
+
+#wpmem_login fieldset input[type=submit]:hover, #wpmem_reg fieldset input[type=submit]:hover
+{  
+    background-color: rgb(0, 114, 66);
+}
+
+#wpmem_login fieldset input[type=submit]:active, #wpmem_reg fieldset input[type=submit]:active
+{  
+    background-color: rgb(0, 83, 49);
+}
+
+#wpmem_login fieldset label, #wpmem_reg fieldset label
+{
+    font-weight: 500;
+}
+
+#wpmem_login fieldset div.div_multicheckbox, #wpmem_reg fieldset div.div_multicheckbox
+{
+    padding-left: 1rem;
+}
+
+#wpmem_login fieldset div.div_multicheckbox label, #wpmem_reg fieldset div.div_multicheckbox label
+{
+    font-weight: 400 !important;
+}
+
 
 
 

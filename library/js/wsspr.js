@@ -40,6 +40,41 @@ function legacy_uri_correction()
     }
 }
 
+function find_field_label(ele)
+{
+    var id = ele.id;
+    labels = document.getElementsByTagName('label');
+
+    for (var i = 0; i < labels.length; i++)
+       if (labels[i].htmlFor == id)
+            return labels[i];
+}
+
+function highlight_required(id)
+{
+    var fields = document.getElementById(id).querySelectorAll("[required]")
+    
+    for (var i = 0; i < fields.length; i++)
+    {
+        var label = find_field_label(fields[i]);
+        if (!label) continue;
+        else
+        {
+            if (fields[i].value === '')
+                label.style.color = 'red';
+            else 
+                label.style.color = 'black';
+        }
+    }
+}
+
+window.addEventListener('load', function ()
+{
+    var reg_btns = document.getElementById("wpmem_register_form").querySelectorAll("[type=submit]");
+    for (var i = 0; i < reg_btns.length; i++)
+        reg_btns[i].onclick = function(e) { console.log(e); highlight_required("wpmem_register_form"); }
+});
+
 iframe.onload = function()
 {
     waitForEle('.toolbar').then((ele) =>
