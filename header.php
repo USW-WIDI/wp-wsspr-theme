@@ -50,7 +50,7 @@
 
 					<div class="title-container">
 
-						<p id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><span class="splossary-s">s</span><span class="splossary-p">p</span>plossary<sup>&trade;</sup><?php //bloginfo('name'); ?></a></p>
+						<p id="logo" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><span class="splossary-s">s</span><span class="splossary-p">p</span>lossary<sup>&trade;</sup><?php //bloginfo('name'); ?></a></p>
 
 						<?php //get_search_form(); ?>
 
