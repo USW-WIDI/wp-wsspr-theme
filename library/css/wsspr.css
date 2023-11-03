@@ -29,17 +29,17 @@ body
 
 p a, section.entry-content ul li a
 {
-    color: #BFB30D !important;
+    color: #2E75B6 !important;
 }
 
 p a:hover, section.entry-content ul li a:hover
 {
-    color: #928b25 !important;
+    color: #164f85 !important;
 }
 
 p a:active, section.entry-content ul li a:active
 {
-    color: #79720f !important;
+    color: #06213a !important;
 }
 
 
@@ -741,8 +741,6 @@ section ul li
 section .wp-block-column ul
 {
     margin-left: 0rem;
-
-    font-size: 100%;
 
     list-style-type: none;
 }

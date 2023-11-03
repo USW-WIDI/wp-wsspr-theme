@@ -48,6 +48,16 @@ iframe.onload = function()
                     waitForEle('#viewerContainer').then((ele5) =>
                     {
                         ele5.style.backgroundColor = "white";
+
+                        var link = document.createElement('link');
+                        
+                        link.rel = "stylesheet";
+                        link.type = "text/css";
+                        link.href = "https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/css/iframe.css";
+
+                        var doc = document.getElementsByClassName('pdfjs-iframe')[0].contentWindow.document.head;
+                        doc.append(link);
+
                     });
                 });
             });
