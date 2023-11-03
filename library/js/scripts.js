@@ -118,27 +118,3 @@ jQuery(document).ready(function($) {
 
 
 }); /* end of as page load scripts */
-
-
-/*
-* Mobile menu functions
-*/
-
-function open_nav()
-{
-  document.getElementById("mobile-menu-itms").style.display = "block";
-}
-
-function open_nav_via_key(e)
-{
-    if(e.keyCode === 13)
-    {
-        e.preventDefault();
-        open_nav();
-    }
-}
-
-function close_nav()
-{
-  document.getElementById("mobile-menu-itms").style.display = "none";
-}

@@ -53,6 +53,8 @@ function bones_ahoy() {
   // adding sidebars to Wordpress (these are created in functions.php)
   add_action( 'widgets_init', 'bones_register_sidebars' );
 
+  // correcting any legacy WSSPR URIs
+  add_filter( 'the_content', 'wsspr_legacy_uri_correction' );
   // cleaning up random code around images
   add_filter( 'the_content', 'bones_filter_ptags_on_images' );
   // cleaning up excerpt

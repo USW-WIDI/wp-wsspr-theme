@@ -26,6 +26,20 @@ function waitForEle(selector){
     });
 }
 
+// Corrects any legacy WSSPR URIs 
+// TEMPORARY solution
+function legacy_uri_correction()
+{
+    var anchors = iframe.contentWindow.document.body.getElementsByTagName("a");
+    console.log(anchors);
+    console.log(anchors.length);
+    for (var i = 0; i < anchors.length; i++)
+    {
+        anchors[i].href = anchors[i].href.replace("http://144.126.230.165", "https://splossary.wales");
+        anchors[i].title = anchors[i].title.replace("http://144.126.230.165", "https://splossary.wales");
+    }
+}
+
 iframe.onload = function()
 {
     waitForEle('.toolbar').then((ele) =>
@@ -58,9 +72,38 @@ iframe.onload = function()
                         var doc = document.getElementsByClassName('pdfjs-iframe')[0].contentWindow.document.head;
                         doc.append(link);
 
+                        setTimeout(function() { legacy_uri_correction(); }, 250);
+                        setTimeout(function() { legacy_uri_correction(); }, 500);
+                        setTimeout(function() { legacy_uri_correction(); }, 1000);
+                        setTimeout(function() { legacy_uri_correction(); }, 2000);
+                        setTimeout(function() { legacy_uri_correction(); }, 4000);
                     });
                 });
             });
         });
     });
 };
+
+
+/*
+    Mobile menu functions
+*/
+
+function open_nav()
+{
+  document.getElementById("mobile-menu-itms").style.display = "block";
+}
+
+function open_nav_via_key(e)
+{
+    if(e.keyCode === 13)
+    {
+        e.preventDefault();
+        open_nav();
+    }
+}
+
+function close_nav()
+{
+  document.getElementById("mobile-menu-itms").style.display = "none";
+}

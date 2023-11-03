@@ -301,6 +301,13 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
+// Corrects any instances of http://144.126.230.165 to
+// https://splossary.wales
+function wsspr_legacy_uri_correction($content)
+{
+	return str_replace("http://144.126.230.165", "https://splossary.wales", $content);
+}
+
 
 
 ?>
