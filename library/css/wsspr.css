@@ -956,7 +956,7 @@ section .wp-block-column ul li
     font-weight: bold !important;
 }
 
-.pdfjs-iframe
+.pdfjs-iframe, .pdfjs-viewer
 {
     border: none !important;
 }
