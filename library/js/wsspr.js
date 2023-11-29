@@ -85,11 +85,31 @@ window.addEventListener('load', function ()
         reg_btns[i].onclick = function(e) { highlight_required("wpmem_register_form"); }
 });
 
+
 function pdf_iframe_init(parent, parent_id)
 {
+    var slug = location.pathname.split('/').slice(1);
+
+    if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+    {
+        parent.setAttribute("style", "border: 1px solid #CCC !important;");
+        //console.log("pdfjs: applying border");
+    }
+
     waitForEle('.toolbar', parent).then((ele) =>
     {
-        ele.style.display = "none";
+        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+        {
+            parent.contentWindow.document.getElementById("toolbarViewerRight").style.display = "none";
+            //console.log("pdfjs: disabling toolbar viewer right");
+        }
+        else
+        {
+            parent.contentWindow.document.getElementById("toolbarViewerRight").style.display = "none";
+            parent.contentWindow.document.getElementById("toolbarContainer").style.display = "none";
+            ele.style.display = "none";
+            //console.log("pdfjs: disabling toolbar & toolbar viewer right");
+        }
 
         waitForEle('#viewerContainer', parent).then((ele2) =>
         {
@@ -112,10 +132,12 @@ function pdf_iframe_init(parent, parent_id)
                         
                         link.rel = "stylesheet";
                         link.type = "text/css";
-                        link.href = "https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/css/iframe.css";
 
-                        console.log(parent_id);
-                        console.log(document.getElementsByClassName(parent_id));
+                        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+                        {
+                            link.href = "https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/css/iframe-doc.css";
+                        }
+                        else link.href = "https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/css/iframe.css";
 
                         var doc = document.getElementsByClassName(parent_id)[0].contentWindow.document.head;
                         doc.append(link);
@@ -137,8 +159,9 @@ if (iframe)
 {
     iframe.onload = function()
     {
-        console.log("New pdf iframe used!");
         pdf_iframe_init(iframe, "pdfjs-viewer");
+        pdf_iframe_init(iframe, "pdfjs-viewer");
+        //console.log("pdfjs: New pdf iframe used!");
     };
 }
 
@@ -146,8 +169,9 @@ if (iframe_legacy)
 {
     iframe_legacy.onload = function()
     {
-        console.log("Old pdf iframe used!");
         pdf_iframe_init(iframe_legacy, "pdfjs-iframe");
+        pdf_iframe_init(iframe_legacy, "pdfjs-iframe");
+        //console.log("pdfjs: Old pdf iframe used!");
     };
 }
 
