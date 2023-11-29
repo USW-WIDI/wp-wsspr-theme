@@ -59,8 +59,34 @@ function bones_ahoy() {
   add_filter( 'the_content', 'bones_filter_ptags_on_images' );
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'bones_excerpt_more' );
+  add_filter( 'retrieve_password_message', 'wsspr_retrieve_password_message', 10, 4 );
 
 } /* end bones ahoy */
+
+function wsspr_retrieve_password_message( $message, $key, $user_login, $user_data ) {
+
+  // Start with the default content.
+  $site_name = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );
+  $message = __( 'You, a website administrator or someone else has requested a password reset for the following splossary account registered with your email:' ) . "\r\n\r\n";
+  /* translators: %s: user login */
+  $message .= sprintf( __( 'Username: %s' ), $user_login ) . "\r\n\r\n";
+  $message .= __( 'If this was a mistake, just ignore this email and nothing will happen.' ) . "\r\n\r\n";
+  $message .= __( 'To reset your password, please click the link below:' ) . "\r\n\r\n";
+  $message .= '<' . network_site_url( "wp-login.php?action=rp&key=$key&login=" . rawurlencode( $user_login ), 'login' ) . ">\r\n";
+
+  /*
+   * If the problem persists with this filter, remove
+   * the last line above and use the line below by
+   * removing "//" (which comments it out) and hard
+   * coding the domain to your site, thus avoiding
+   * the network_site_url() function.
+   */
+  // $message .= '<http://yoursite.com/wp-login.php?action=rp&key=' . $key . '&login=' . rawurlencode( $user_login ) . ">\r\n";
+
+  // Return the filtered message.
+  return $message;
+
+}
 
 // let's get this party started
 add_action( 'after_setup_theme', 'bones_ahoy' );
