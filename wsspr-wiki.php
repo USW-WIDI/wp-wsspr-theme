@@ -32,6 +32,36 @@ $GLOBALS["en_easy_urls"] = array(
 
 
 
+// Welsh easy-read dictionary
+$GLOBALS["cy_easy_urls"] = array(
+    "Cynllunio Camau Gweithredu" => "/cy/wiki/action-planning-easy/",
+    "Atgyfeirio Glas" => "/cy/wiki/blue-referral-easy/",
+    "System Gyfeillio" => "/cy/wiki/buddy-system-easy/",
+    "Asedau Cymunedol" => "/cy/wiki/community-assets-easy/",
+    "Hybiau Cymorth Cymunedol" => "/cy/wiki/community-support-hubs-easy/",
+    "Cydgynhyrchu" => "/cy/wiki/co-production-easy/",
+    "Atgyfeirio Creadigol" => "/cy/wiki/creative-referral-easy/",
+    "Atgyfeirio at Addysg" => "/cy/wiki/education-on-referral-easy/",
+    "Atgyfeirio at Ymarfer Corff" => "/cy/wiki/exercise-referral-easy/",
+    "Atgyfeirio Gwyrdd" => "/cy/wiki/green-referral-easy/",
+    "Cyfannol" => "/cy/wiki/holistic-easy/",
+    "Ymyriadau’n Seiliedig ar Natur" => "/cy/wiki/nature-based-interventions-easy/",
+    "Ymyriadau'n Seiliedig ar Natur" => "/cy/wiki/nature-based-interventions-easy/",
+    "Dull Person Ganolog o Fynd Ati" => "/cy/wiki/person-centred-approach-easy/",
+    "Atgyfeirio" => "/cy/wiki/referral-easy/",
+    "Cyfeirio a Chyfeirio Gweithredol" => "/cy/wiki/signposting-active-signposting-easy/",
+    "Caffis Cymunedol" => "/cy/wiki/social-cafes-easy/",
+    "Llwybr Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-practitioner-easy/",
+    "Ymarferydd Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-practitioner-easy/",
+    "Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-easy/",
+    "Atgyfeirio at Gymorth Lles" => "/cy/wiki/welfare-support-referral-easy/",
+    "Llesiant" => "/cy/wiki/well-being-easy/",
+    "Sgwrs am Yr Hyn sy’n Bwysig" => "/cy/wiki/what-matters-conversation-easy/",
+    "Sgwrs am Yr Hyn sy'n Bwysig" => "/cy/wiki/what-matters-conversation-easy/"
+);
+
+
+
 /*
     Functions needed for WSSPR Wiki to operate
 */
@@ -269,6 +299,7 @@ function wsspr_wiki(&$title, &$content)
             $desc_header = "";
             $alt_header = "<span class='ww-subheading'>Mae hyn weithiau yn cael ei alw yn:</span> ";
             $connected_header = "<span class='ww-subheading'>Connected terms:</span> ";
+            $connected = process_connected_terms($connected, $GLOBALS["cy_easy_urls"]);
         }
         else
         {
