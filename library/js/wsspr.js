@@ -90,7 +90,7 @@ function pdf_iframe_init(parent, parent_id)
 {
     var slug = location.pathname.split('/').slice(1);
 
-    if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+    if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf" || slug[0] == "welsh-easy-read-pdf" || slug[0] == "welsh-professional-pdf")
     {
         parent.setAttribute("style", "border: 1px solid #CCC !important;");
         //console.log("pdfjs: applying border");
@@ -98,7 +98,7 @@ function pdf_iframe_init(parent, parent_id)
 
     waitForEle('.toolbar', parent).then((ele) =>
     {
-        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf" || slug[0] == "welsh-easy-read-pdf" || slug[0] == "welsh-professional-pdf")
         {
             parent.contentWindow.document.getElementById("toolbarViewerRight").style.display = "none";
             //console.log("pdfjs: disabling toolbar viewer right");
@@ -133,7 +133,7 @@ function pdf_iframe_init(parent, parent_id)
                         link.rel = "stylesheet";
                         link.type = "text/css";
 
-                        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf")
+                        if (slug[0] == "english-easy-read-pdf" || slug[0] == "english-professional-pdf" || slug[0] == "welsh-easy-read-pdf" || slug[0] == "welsh-professional-pdf")
                         {
                             link.href = "https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/css/iframe-doc.css";
                         }
