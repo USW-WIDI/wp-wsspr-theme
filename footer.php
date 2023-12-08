@@ -35,6 +35,23 @@
 						<a href="https://healthandcareresearchwales.org/"  target="_blank">
 							<img alt="Welsh Government funding logo" src="https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/images/logos/welsh-government.png" />
 						</a>
+
+						<a href="#"  target="_blank">
+
+						<?php 
+
+							if (get_locale() == "cy")
+							{
+								echo '<img alt="Strategic programme for primary care (SPPC) logo" src="https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/images/logos/sppc-cy.png" />';
+							}
+							else
+							{
+								echo '<img alt="Strategic programme for primary care (SPPC) logo" src="https://splossary.wales/wp-content/themes/wp-wsspr-theme/library/images/logos/sppc.png" />';
+							}
+
+						?>
+
+						</a>
 						
 					</div>
 
