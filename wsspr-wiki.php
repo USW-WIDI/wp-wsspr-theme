@@ -12,6 +12,7 @@ $GLOBALS["en_easy_urls"] = array(
     "Community Assets" => "/wiki/community-assets-easy/",
     "Community Support Hubs" => "/wiki/community-support-hubs-easy/",
     "Co-Production" => "/wiki/co-production-easy/",
+    "Co-Produce" => "/wiki/co-production-easy/",
     "Creative Referral" => "/wiki/creative-referral-easy/",
     "Education on Referral" => "/wiki/education-on-referral-easy/",
     "Exercise Referral" => "/wiki/exercise-referral-easy/",
@@ -62,6 +63,64 @@ $GLOBALS["cy_easy_urls"] = array(
 
 
 
+// Welsh professional dictionary
+$GLOBALS["cy_pro_urls"] = array(
+    "Cynllunio Camau Gweithredu" => "/cy/wiki/action-planning/",
+    "Dull sy’n Seiliedig ar Asedau" => "/cy/wiki/asset-based-approach/",
+    "Dull sy'n Seiliedig ar Asedau" => "/cy/wiki/asset-based-approach/",
+    "Mapio Asedau" => "/cy/wiki/asset-mapping/",
+    "Atgyfeirio Glas" => "/cy/wiki/blue-referral/",
+    "Atgyfeirio at Lyfrau" => "/cy/wiki/books-on-referral/",
+    "System Gyfeillio" => "/cy/wiki/buddy-system/",
+    "Datblygu’r Practis" => "/cy/wiki/building-the-practice/",
+    "Datblygu'r Practis" => "/cy/wiki/building-the-practice/",
+    "Llywiwr Gofal" => "/cy/wiki/care-navigator/",
+    "Asedau Cymunedol" => "/cy/wiki/community-assets/",
+    "Hybiau Cymorth Cymunedol" => "/cy/wiki/community-support-hubs/",
+    "Sefydliadau’r Sector Cymunedol a Gwirfoddol" => "/cy/wiki/community-voluntary-sector-organisations/",
+    "Sefydliadau'r Sector Cymunedol a Gwirfoddol" => "/cy/wiki/community-voluntary-sector-organisations/",
+    "Cydgynhyrchu" => "/cy/wiki/co-production/",
+    "cweithgareddau atgyfeirio creadigol" => "/cy/wiki/creative-referral/",
+    "Atgyfeirio Creadigol" => "/cy/wiki/creative-referral/",
+    "Atgyfeiriad Creadigol" => "/cy/wiki/creative-referral/",
+    "Presgripsiynu Cymdeithasol Digidol" => "/cy/wiki/digital-social-prescribing/",
+    "Atgyfeirio at Addysg" => "/cy/wiki/education-on-referral/",
+    "Atgyfeirio at Ymarfer Corff" => "/cy/wiki/exercise-referral/",
+    "Atgyfeirio Gwyrdd" => "/cy/wiki/green-referral/",
+    "Hwylusydd Iechyd" => "/cy/wiki/health-facilitator/",
+    "Cyfannol" => "/cy/wiki/holistic/",
+    "Ymyriadau’n Seiliedig ar Natur" => "/cy/wiki/nature-based-interventions/",
+    "Ymyriadau'n Seiliedig ar Natur" => "/cy/wiki/nature-based-interventions/",
+    "Dull Person Ganolog o Fynd Ati" => "/cy/wiki/person-centred-approach-2/",
+    "dull sy’n canolbwyntio ar yr unigolyn" => "/cy/wiki/person-centred-approach-2/",
+    "Cynllun dan Reolaeth Practis" => "/cy/wiki/practice-managed-scheme/",
+    "cynlluniau dan reolaeth practis" => "/cy/wiki/practice-managed-scheme/",
+    "Cyfeirio a Chyfeirio Gweithredol" => "/cy/wiki/active-signposting/",
+    "Caffis Cymunedol" => "/cy/wiki/social-cafes/",
+    "caffis cymdeithasol" => "/cy/wiki/social-cafes/",
+    "Dulliau Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-approach/",
+    "Hyrwyddwr Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-champion/",
+    "Model Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-models/",
+    "Modelau Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-models/",
+    "Egwyddorion Canlyniad Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-outcome-principles/",
+    "Llwybr Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-pathway/",
+    "Ymarferydd Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing-practitioner/",
+    "Gwasanaethau Statudol" => "/cy/wiki/statutory-services/",
+    "Atgyfeirio at Gymorth Lles" => "/cy/wiki/welfare-support-referral/",
+    "Llesiant" => "/cy/wiki/well-being/",
+    "Sgwrs am Yr Hyn sy’n Bwysig" => "/cy/wiki/what-matters-conversation/",
+    "Sgwrs am Yr Hyn sy'n Bwysig" => "/cy/wiki/what-matters-conversation/",
+    "Atgyfeirio" => "/cy/wiki/referral/",
+    "Atgyfeiriad" => "/cy/wiki/referral/",
+    "cyfeirio" => "/cy/wiki/referral/",
+    "ymgymryd â phresgripsiynu cymdeithasol" => "/cy/wiki/social-prescribing/",
+    "bresgripsiynu cymdeithasol" => "/cy/wiki/social-prescribing/",
+    "Presgripsiynnu Cymdeithasol" => "/cy/wiki/social-prescribing/",
+    "Presgripsiynu Cymdeithasol" => "/cy/wiki/social-prescribing/"
+);
+
+ 
+
 /*
     Functions needed for WSSPR Wiki to operate
 */
@@ -111,6 +170,9 @@ function intepret_markdown($markdown)
     $markdown = preg_replace_callback('/\*\*/', function($m) use (&$count) { ++$count; return $count % 2 ? '<strong>' : '</strong>'; }, $markdown);
     $markdown = preg_replace_callback('/__/', function($m) use (&$count) { ++$count; return $count % 2 ? '<strong>' : '</strong>'; }, $markdown);
 
+    // Pass for superscript
+    $markdown = preg_replace_callback('/\^\^/', function($m) use (&$count) { ++$count; return $count % 2 ? '<sup>' : '</sup>'; }, $markdown);
+
     // Pass for colour declarations (CUSTOM)
     preg_match_all('/\$\[(.*?)\]\((.*?)\)/', $markdown, $out, PREG_PATTERN_ORDER);
     for ($i = 0; $i < count($out[0]); $i++)
@@ -130,39 +192,7 @@ function intepret_markdown($markdown)
     preg_match_all('/\[(.*?)\]\((.*?)\)/', $markdown, $out, PREG_PATTERN_ORDER);
     for ($i = 0; $i < count($out[0]); $i++)
     {
-        if (!contains_word($out[1][$i], "<") && !contains_word($out[1][$i], "["))
-        {
-            $pos = strpos($markdown, $out[0][$i]);
-            if (($pos - 1) < 0) continue;
-            $prev_char = $markdown[$pos - 1];
-            if ($prev_char != " ") continue;
-
-            $markdown = str_replace($out[0][$i], a($out[1][$i], $out[2][$i]), $markdown);
-        }
-        else if (contains_word($out[0][$i], " ["))
-        {
-            preg_match_all('/\ \[(.*?)\]\((.*?)\)/', $out[0][$i], $out_3, PREG_PATTERN_ORDER);
-            for ($j = 0; $j < count($out_3[0]); $j++)
-            {
-                $markdown = str_replace($out_3[0][$j], " ".a($out_3[1][$j], $out_3[2][$j]), $markdown);
-            }
-        }
-        else if (contains_word($out[0][$i], "[["))
-        {
-            preg_match_all('/\[\[(.*?)\]\((.*?)\)/', $out[0][$i], $out_3, PREG_PATTERN_ORDER);
-            for ($j = 0; $j < count($out_3[0]); $j++)
-            {
-                $markdown = str_replace($out_3[0][$j], "[".a($out_3[1][$j], $out_3[2][$j]), $markdown);
-            }
-        }
-        else
-        {
-            preg_match_all('/\|\[(.*?)\]\((.*?)\)/', $out[0][$i], $out_2, PREG_PATTERN_ORDER);
-            for ($j = 0; $j < count($out_2[0]); $j++)
-            {
-                $markdown = str_replace($out_2[0][$j], "|".a($out_2[1][$j], $out_2[2][$j]), $markdown);
-            }
-        }
+        $markdown = str_replace($out[0][$i], a($out[1][$i], $out[2][$i]), $markdown);
     }
     
     $doing_bullets = false;
@@ -202,6 +232,19 @@ function intepret_markdown($markdown)
     return $markdown;
 }
 
+function str_replace_outside_tags($toReplace = 'inner text', $dummyText = '(REPLACED TEXT HERE)', $sourceText = null)
+{
+  $string = $sourceText;
+  $punctuation = "\.,!\?:;\\|\/=\"#";
+  $stringPart = "\b$toReplace\b";
+  $excludeSequence = "(?![\w\n\s>$punctuation]*?";
+  $excludeOutside = "$excludeSequence<\/)";
+  $excludeTag = "$excludeSequence>)";
+  $pattern = "/" . $stringPart . $excludeOutside . $excludeTag . "/im";
+  
+  return preg_replace($pattern, $dummyText, $string);
+}
+
 /**
  * Creates hyperlinks for terms within a connected terms
  * string
@@ -211,10 +254,13 @@ function intepret_markdown($markdown)
  */
 function process_connected_terms($str, $dict)
 {
-    // Clean the string by removing double spaces
-    // or replacing no-break spaces (U+00a0) with real spaces
+    // Clean the string by removing double spaces, replacing no-break spaces
+    // (U+00a0) with real spaces and removing line endings
     $str = str_replace(" ", " ", $str);
     $str = str_replace("  ", " ", $str);
+    $str = str_replace(".", "", $str);
+    $str = trim(preg_replace('/\s\s+/', ' ', $str));
+
     $terms = explode(", ", $str);
     asort($terms, SORT_NATURAL);
     
@@ -222,6 +268,7 @@ function process_connected_terms($str, $dict)
     {
         foreach ($dict as $k => $v)
         {
+            $term = trim($term, " ");
             if (strtolower($k) == strtolower($term))
             {
                 $term = a($term, $v);
@@ -231,6 +278,19 @@ function process_connected_terms($str, $dict)
     }
 
     return implode(", ", $terms);
+}
+
+function process_desc_terms($str, $title, $dict)
+{
+    krsort($dict, SORT_NATURAL);
+    foreach($dict as $k => $v)
+    {
+        if (strtolower($k) == strtolower($title)) continue;
+        $a = a(strtolower($k), $v);
+        $str = str_replace_outside_tags($k, $a, $str);
+    }
+
+    return $str;
 }
 
 
@@ -298,25 +358,29 @@ function wsspr_wiki(&$title, &$content)
         {
             $desc_header = "";
             $alt_header = "<span class='ww-subheading'>Mae hyn weithiau yn cael ei alw yn:</span> ";
-            $connected_header = "<span class='ww-subheading'>Connected terms:</span> ";
+            $connected_header = "<span class='ww-subheading'>Termau Cysylltiedig:</span> ";
             $connected = process_connected_terms($connected, $GLOBALS["cy_easy_urls"]);
+            $desc = intepret_markdown($desc);
         }
         else
         {
-            $desc_header = "<span class='ww-subheading'>Description:</span> ";
-            $alt_header = "<span class='ww-subheading'>Alternative terms:</span> ";
-            $connected_header = "<span class='ww-subheading'>Connected terms:</span> ";
+            $desc_header = "<span class='ww-subheading'>Disgrifiad:</span> ";
+            $alt_header = "<span class='ww-subheading'>Termau Amgen:</span> ";
+            $connected_header = "<span class='ww-subheading'>Termau Cysylltiedig:</span> ";
+            $connected = process_connected_terms($connected, $GLOBALS["cy_pro_urls"]);
+            $desc = process_desc_terms(intepret_markdown($desc), $title, $GLOBALS["cy_pro_urls"]);
 
             // If alt or connected are empty, - to indicate to end-user this is normal
             if ($alt == "") $alt = "-";
             if ($connected == "") $connected = "-";
         }
     }
+    else $desc = intepret_markdown($desc);
 
     if ($desc != "")
     {
-        $content = $desc_header.intepret_markdown($desc)."\n\n";
-        if ($alt != "") $content .= $alt_header.$alt."\n\n";
+        $content = $desc_header.$desc."\n\n";
+        if ($alt != "") $content .= $alt_header.intepret_markdown($alt)."\n\n";
         if ($connected != "") $content .= $connected_header.$connected."\n\n";
 
         if ($mindmap != "")
