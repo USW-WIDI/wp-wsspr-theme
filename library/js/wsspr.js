@@ -161,7 +161,6 @@ if (iframe)
     {
         pdf_iframe_init(iframe, "pdfjs-viewer");
         pdf_iframe_init(iframe, "pdfjs-viewer");
-        //console.log("pdfjs: New pdf iframe used!");
     };
 }
 
@@ -171,7 +170,6 @@ if (iframe_legacy)
     {
         pdf_iframe_init(iframe_legacy, "pdfjs-iframe");
         pdf_iframe_init(iframe_legacy, "pdfjs-iframe");
-        //console.log("pdfjs: Old pdf iframe used!");
     };
 }
 
