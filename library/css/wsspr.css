@@ -247,7 +247,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     background-image: none !important;
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 1280px)
 {
 
     #main-nav
@@ -362,7 +362,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     background-image: url(../images/search-white.png);
 }
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 1280px)
 {
 
     .header .wsspr-search
@@ -505,7 +505,7 @@ header .menu-item.menu-item-has-children .sub-menu .menu-item:active a
     margin-left: 1rem;
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 1280px)
 {
 
     .mobile-menu-btn
